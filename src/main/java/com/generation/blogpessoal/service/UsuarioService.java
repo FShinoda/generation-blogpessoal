@@ -36,7 +36,6 @@ public class UsuarioService {
 		usuario.setSenha(criptografarSenha(usuario.getSenha()));
 
 		return Optional.of(usuarioRepository.save(usuario));
-	
 	}
 
 	public Optional<Usuario> atualizarUsuario(Usuario usuario) {
@@ -90,7 +89,6 @@ public class UsuarioService {
         } 
             
 		return Optional.empty();
-
     }
 
 	private String criptografarSenha(String senha) {

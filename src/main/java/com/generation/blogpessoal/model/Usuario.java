@@ -21,6 +21,16 @@ import jakarta.validation.constraints.Size;
 @Table(name="tb_usuario")
 public class Usuario {
 	
+	public Usuario(Long id, String nome, String usuario,  String senha, String foto) {
+		this.id = id;
+		this.nome = nome;
+		this.usuario = usuario;
+		this.senha = senha;
+		this.foto = foto;
+	}
+	
+	public Usuario() {}
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
